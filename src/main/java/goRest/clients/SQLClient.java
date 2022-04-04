@@ -3,7 +3,7 @@ import java.sql.*;
 
 import static goRest.common.Constants.*;
 
-public class SqlClient {
+public class SQLClient {
     Connection connection = null;
     Statement statement = null;
     ResultSet resultSet = null;
