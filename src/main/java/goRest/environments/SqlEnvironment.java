@@ -1,11 +1,12 @@
 package goRest.environments;
+import static goRest.common.Constants.*;
 
 public class SqlEnvironment {
-    private final String baseHost = "jdbc:mysql";
-    private final String host = "localhost";
-    private final String port = "3306";
-    private final String username = "root";
-    private final String password = "Test1234";
+    private final String baseHost = BASE_HOST;
+    private final String host = HOST;
+    private final String port = PORT;
+    private final String username = SQL_USERNAME;
+    private final String password = SQL_PASSWORD;
 
     public String getBaseHost(){
         return baseHost;
