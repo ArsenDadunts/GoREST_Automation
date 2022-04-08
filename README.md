@@ -48,11 +48,13 @@ The project consists of the following files:
 │       │          │   └── Data.java
 │       │          ├── definitions
 │       │          │   ├── RESTStepDefinitions.java
+│       │          │   ├── ObjectValidationDefinitions.java
 │       │          │   └── SQLStepDefinitions.java
 │       │          └── environments
 │       │              └── SqlEnvironment.java
+│       │          └── utilities
+│       │              └── Utils.java
 │       └── resources
-│                  └── lib
 └── test
    ├── java
    |      └── CucumberRunnerTest
