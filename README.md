@@ -94,6 +94,6 @@ Please see all supported arguments of run.py below:
 |-ex, --exclude |Specify tags to exclude |python run.py --ex_groups positive|
 |--tags |Specify tags to include in run |python run.py -ex smoke|
 
-##Test results
+## Test results
 
 After completing run the "results" folder is generated with html, json, and xml report files.  
