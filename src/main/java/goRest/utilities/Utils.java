@@ -1,4 +1,4 @@
-package goRest;
+package goRest.utilities;
 
 import org.json.JSONObject;
 
