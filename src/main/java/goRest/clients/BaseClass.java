@@ -8,7 +8,6 @@ import io.restassured.config.RestAssuredConfig;
 import static java.lang.System.setProperty;
 
 public class BaseClass {
-
     public RestAssuredConfig config;
 
     public BaseClass() {
