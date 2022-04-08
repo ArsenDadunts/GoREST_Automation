@@ -1,6 +1,6 @@
 .idea
 target
-results/*
+results
 *.iml
 
 # Package Files #
