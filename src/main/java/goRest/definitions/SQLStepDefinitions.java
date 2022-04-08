@@ -1,17 +1,17 @@
 package goRest.definitions;
 
-import goRest.Utils;
+import goRest.utilities.Utils;
 import goRest.clients.SQLClient;
+import goRest.common.Data;
 import goRest.environments.SqlEnvironment;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.restassured.response.Response;
 import org.testng.Assert;
+
+import static goRest.common.Constants.API_RESPONSE_BODY;
 
 public class SQLStepDefinitions {
     SQLClient sqlClient = new SQLClient();
     SqlEnvironment sqlConf = new SqlEnvironment();
-    private static Response response;
     Utils utils = new Utils();
 
     @Given("I connect to {string} Sql")
@@ -28,12 +28,14 @@ public class SQLStepDefinitions {
         }
     }
 
-    @Then("I store response data in {string} Sql")
+    @Given("I store response data in {string} Sql")
     public void storeDataInSql(String tableName) {
-        sqlClient.insertDataToTable(tableName, utils.convertResKeysToSqlStatement(response), utils.convertResValuesToSqlStatement(response));
+        sqlClient.insertDataToTable(tableName,
+                utils.convertResKeysToSqlStatement(Data.get(API_RESPONSE_BODY).toString()),
+                utils.convertResValuesToSqlStatement(Data.get(API_RESPONSE_BODY).toString()));
     }
 
-    @Then("I get all data from {string} Sql")
+    @Given("I get all data from {string} Sql")
     public void getDataFromSql(String tableName) {
         try {
             sqlClient.getAllDataFromTable(tableName);
